@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,119 +7,317 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <div class="app">
 
-<header class="topbar">
-  <h1>Dashboard</h1>
-  <span class="date">Weekly 08 Dec to 14 Dec</span>
-</header>
-
-<main class="dashboard">
-
-  <!-- Delegation -->
-  <section class="card">
-    <h2>Delegation</h2>
-    <div class="stats-grid">
-      <div class="stat">All Task <b>100</b></div>
-      <div class="stat pending">Pending 70</div>
-      <div class="stat expired">Expired 30</div>
-      <div class="stat feature">Feature 40</div>
-      <div class="stat completed">Completed 30</div>
-    </div>
-  </section>
-
-  <!-- Top Employees -->
-  <section class="card">
-    <h2>Top 10 Employee Score</h2>
-    <ul class="list">
-      <li><span>Rahul Sharma</span><b>92</b></li>
-      <li><span>Anita Verma</span><b>89</b></li>
-      <li><span>Rohit Singh</span><b>86</b></li>
-    </ul>
-  </section>
-
-  <!-- Checklist -->
-  <section class="card">
-    <h2>Checklist</h2>
-    <div class="stats-grid">
-      <div class="stat">All Task 130</div>
-      <div class="stat pending">Pending 70</div>
-      <div class="stat expired">Expired 30</div>
-      <div class="stat feature">Feature 40</div>
-      <div class="stat completed">Completed 30</div>
-    </div>
-    <div class="check-points">
-      <p>✔ Timely Work</p>
-      <p>✖ After Plan Date Work</p>
-    </div>
-  </section>
-
-  <!-- Lead Application -->
-  <section class="card">
-    <h2>Lead Application</h2>
-    <div class="two-col">
-      <div>
-        <h4>Lead Status</h4>
-        <p>Connected</p>
-        <p>Won</p>
-        <p>Lost</p>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="logo">S</div>
+        <div class="brandText">
+          <div class="brandName">Shemrock</div>
+          <div class="brandSub">Admin Dashboard</div>
+        </div>
       </div>
-      <div>
-        <h4>Lead Source</h4>
-        <p>Facebook</p>
-        <p>Indiamart</p>
-        <p>TradeIndia</p>
-        <p>Other</p>
+
+      <nav class="nav">
+        <a class="navItem active" href="#"><span class="dot"></span>Dashboard</a>
+        <a class="navItem" href="#"><span class="dot"></span>Delegation</a>
+        <a class="navItem" href="#"><span class="dot"></span>Checklist</a>
+        <a class="navItem" href="#"><span class="dot"></span>Leads</a>
+        <a class="navItem" href="#"><span class="dot"></span>Call Logs</a>
+        <a class="navItem" href="#"><span class="dot"></span>Reports</a>
+      </nav>
+
+      <div class="sidebarFooter">
+        <div class="pill">Weekly 08 Dec → 14 Dec</div>
+        <div class="hint">Responsive • Modern UI</div>
       </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <button class="iconBtn" aria-label="Toggle menu" onclick="toggleSidebar()">
+          <span class="hamburger"></span>
+        </button>
+
+        <div class="topbarLeft">
+          <div class="titleBlock">
+            <h1>Dashboard</h1>
+            <p class="muted">Overview of tasks, leads & call logs</p>
+          </div>
+        </div>
+
+        <div class="topbarRight">
+          <div class="search">
+            <span class="searchIcon">⌕</span>
+            <input type="text" placeholder="Search employee, lead, city..." />
+          </div>
+          <div class="avatar" title="Admin">AD</div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="content">
+
+        <!-- Row 1: KPI cards -->
+        <section class="grid grid-4">
+          <article class="kpiCard">
+            <div class="kpiTop">
+              <span class="tag tag-indigo">Delegation</span>
+              <span class="kpiMini">All Task</span>
+            </div>
+            <div class="kpiValue">100</div>
+            <div class="kpiMeta">
+              <span class="badge b-pending">Pending 70</span>
+              <span class="badge b-expired">Expired 30</span>
+            </div>
+            <div class="progress">
+              <div class="bar" style="width:70%"></div>
+            </div>
+          </article>
+
+          <article class="kpiCard">
+            <div class="kpiTop">
+              <span class="tag tag-emerald">Checklist</span>
+              <span class="kpiMini">All Task</span>
+            </div>
+            <div class="kpiValue">130</div>
+            <div class="kpiMeta">
+              <span class="badge b-feature">Feature 40</span>
+              <span class="badge b-done">Completed 30</span>
+            </div>
+            <div class="progress">
+              <div class="bar" style="width:55%"></div>
+            </div>
+          </article>
+
+          <article class="kpiCard">
+            <div class="kpiTop">
+              <span class="tag tag-amber">Lead Application</span>
+              <span class="kpiMini">Connected</span>
+            </div>
+            <div class="kpiValue">48</div>
+            <div class="kpiMeta">
+              <span class="badge b-done">Won 12</span>
+              <span class="badge b-expired">Lost 8</span>
+            </div>
+            <div class="progress">
+              <div class="bar" style="width:62%"></div>
+            </div>
+          </article>
+
+          <article class="kpiCard">
+            <div class="kpiTop">
+              <span class="tag tag-rose">Call Log</span>
+              <span class="kpiMini">Total Calls</span>
+            </div>
+            <div class="kpiValue">200</div>
+            <div class="kpiMeta">
+              <span class="badge b-indigo">Incoming 120</span>
+              <span class="badge b-muted">Outgoing 80</span>
+            </div>
+            <div class="progress">
+              <div class="bar" style="width:80%"></div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Row 2 -->
+        <section class="grid grid-3">
+
+          <!-- Delegation detail -->
+          <article class="card">
+            <div class="cardHeader">
+              <h2>Delegation</h2>
+              <span class="pill">Task Status</span>
+            </div>
+
+            <div class="statGrid">
+              <div class="stat">
+                <div class="label">All Task</div>
+                <div class="num">100</div>
+              </div>
+              <div class="stat">
+                <div class="label">Pending</div>
+                <div class="num textPending">70</div>
+              </div>
+              <div class="stat">
+                <div class="label">Expired</div>
+                <div class="num textExpired">30</div>
+              </div>
+              <div class="stat">
+                <div class="label">Feature</div>
+                <div class="num textFeature">40</div>
+              </div>
+              <div class="stat">
+                <div class="label">Completed</div>
+                <div class="num textDone">30</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Top Employees -->
+          <article class="card">
+            <div class="cardHeader">
+              <h2>Top 10 Employee Score</h2>
+              <span class="pill">This week</span>
+            </div>
+
+            <ul class="rankList">
+              <li><span class="rank">1</span><span class="name">Rahul Sharma</span><span class="score">92</span></li>
+              <li><span class="rank">2</span><span class="name">Anita Verma</span><span class="score">89</span></li>
+              <li><span class="rank">3</span><span class="name">Rohit Singh</span><span class="score">86</span></li>
+              <li><span class="rank">4</span><span class="name">Neha Gupta</span><span class="score">84</span></li>
+              <li><span class="rank">5</span><span class="name">Vikas Meena</span><span class="score">81</span></li>
+            </ul>
+          </article>
+
+          <!-- Checklist detail -->
+          <article class="card">
+            <div class="cardHeader">
+              <h2>Checklist</h2>
+              <span class="pill">Quality</span>
+            </div>
+
+            <div class="statGrid">
+              <div class="stat">
+                <div class="label">All Task</div>
+                <div class="num">130</div>
+              </div>
+              <div class="stat">
+                <div class="label">Pending</div>
+                <div class="num textPending">70</div>
+              </div>
+              <div class="stat">
+                <div class="label">Expired</div>
+                <div class="num textExpired">30</div>
+              </div>
+              <div class="stat">
+                <div class="label">Feature</div>
+                <div class="num textFeature">40</div>
+              </div>
+              <div class="stat">
+                <div class="label">Completed</div>
+                <div class="num textDone">30</div>
+              </div>
+            </div>
+
+            <div class="checkPoints">
+              <div class="cp ok">✓ Timely Work</div>
+              <div class="cp warn">⚠ After Plan Date Work</div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Row 3 -->
+        <section class="grid grid-2">
+          <!-- Lead Application -->
+          <article class="card">
+            <div class="cardHeader">
+              <h2>Lead Application</h2>
+              <span class="pill">Status & Source</span>
+            </div>
+
+            <div class="twoCol">
+              <div class="box">
+                <h3>Lead Status</h3>
+                <div class="chips">
+                  <span class="chip">Connected</span>
+                  <span class="chip chipGood">Won</span>
+                  <span class="chip chipBad">Lost</span>
+                </div>
+              </div>
+              <div class="box">
+                <h3>Lead Source</h3>
+                <div class="chips">
+                  <span class="chip">Facebook</span>
+                  <span class="chip">Indiamart</span>
+                  <span class="chip">TradeIndia</span>
+                  <span class="chip">Other</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Call log -->
+          <article class="card">
+            <div class="cardHeader">
+              <h2>Call Log Summary</h2>
+              <span class="pill">Today</span>
+            </div>
+
+            <div class="statGrid">
+              <div class="stat"><div class="label">Total</div><div class="num">200</div></div>
+              <div class="stat"><div class="label">Incoming</div><div class="num">120</div></div>
+              <div class="stat"><div class="label">Outgoing</div><div class="num">80</div></div>
+              <div class="stat"><div class="label">Connected</div><div class="num textDone">90</div></div>
+              <div class="stat"><div class="label">Missed</div><div class="num textExpired">50</div></div>
+              <div class="stat"><div class="label">Rejected</div><div class="num">20</div></div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Table -->
+        <section class="card">
+          <div class="cardHeader">
+            <h2>Lead List</h2>
+            <div class="actions">
+              <button class="btn">Export</button>
+              <button class="btn btnPrimary">Add Lead</button>
+            </div>
+          </div>
+
+          <div class="tableWrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Mobile</th>
+                  <th>Email</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>Address</th>
+                  <th>Count</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Name">Amit Kumar</td>
+                  <td data-label="Mobile">9876543210</td>
+                  <td data-label="Email">amit@email.com</td>
+                  <td data-label="City">Delhi</td>
+                  <td data-label="State">Delhi</td>
+                  <td data-label="Address">South Delhi</td>
+                  <td data-label="Count">5</td>
+                  <td data-label="Action"><button class="btnSmall">View</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Name">Priya Singh</td>
+                  <td data-label="Mobile">9123456780</td>
+                  <td data-label="Email">priya@email.com</td>
+                  <td data-label="City">Noida</td>
+                  <td data-label="State">UP</td>
+                  <td data-label="Address">Sector 62</td>
+                  <td data-label="Count">2</td>
+                  <td data-label="Action"><button class="btnSmall">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </main>
     </div>
-  </section>
+  </div>
 
-  <!-- Call Log -->
-  <section class="card">
-    <h2>Call Log Summary</h2>
-    <div class="stats-grid">
-      <div class="stat">Total 200</div>
-      <div class="stat">Incoming 120</div>
-      <div class="stat">Outgoing 80</div>
-      <div class="stat completed">Connected 90</div>
-      <div class="stat expired">Missed 50</div>
-      <div class="stat">Rejected 20</div>
-    </div>
-  </section>
-
-  <!-- Table -->
-  <section class="card full-width">
-    <h2>Lead List</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Mobile</th>
-            <th>Email</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Address</th>
-            <th>Count</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Amit Kumar</td>
-            <td>9876543210</td>
-            <td>amit@email.com</td>
-            <td>Delhi</td>
-            <td>Delhi</td>
-            <td>South Delhi</td>
-            <td>5</td>
-            <td><button>View</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-</main>
-
+  <script>
+    function toggleSidebar(){
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
