@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Delegation</li>
+            <li>Checklist</li>
+            <li>Leads</li>
+            <li>Call Logs</li>
+            <li>Table List</li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h2>Admin Dashboard</h2>
+            <span>Welcome, Admin</span>
+        </div>
+
+        <!-- DELEGATION -->
+        <h3>Delegation – Task Status</h3>
+        <div class="cards">
+            <div class="card blue"><h4>All Task</h4><h2>100</h2></div>
+            <div class="card orange"><h4>Pending Task</h4><h2>70</h2></div>
+            <div class="card red"><h4>Expired Task</h4><h2>30</h2></div>
+            <div class="card purple"><h4>Feature Task</h4><h2>40</h2></div>
+            <div class="card green"><h4>Completed Task</h4><h2>30</h2></div>
+        </div>
+
+        <!-- TOP EMPLOYEE -->
+        <div class="section">
+            <h3>Top 10 Employee Score</h3>
+            <table>
+                <tr>
+                    <th>Emp Name</th>
+                    <th>Week</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>Rahul Sharma</td>
+                    <td>08 Dec – 14 Dec</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>Neha Verma</td>
+                    <td>08 Dec – 14 Dec</td>
+                    <td>88</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CHECKLIST -->
+        <h3>Checklist</h3>
+        <div class="cards">
+            <div class="card blue"><h4>All Task</h4><h2>130</h2></div>
+            <div class="card orange"><h4>Pending</h4><h2>70</h2></div>
+            <div class="card red"><h4>Expired</h4><h2>30</h2></div>
+            <div class="card purple"><h4>Feature</h4><h2>40</h2></div>
+            <div class="card green"><h4>Completed</h4><h2>30</h2></div>
+        </div>
+
+        <!-- LEADS -->
+        <div class="section">
+            <h3>Lead Application</h3>
+            <p><strong>Status:</strong> Connected | Won | Lost</p>
+            <p><strong>Source:</strong> Facebook, Indiamart, Tradeindia, Other</p>
+        </div>
+
+        <!-- CALL LOG -->
+        <h3>Call Log Summary</h3>
+        <div class="cards">
+            <div class="card blue"><h4>Total Call</h4><h2>220</h2></div>
+            <div class="card green"><h4>Connected</h4><h2>160</h2></div>
+            <div class="card orange"><h4>Incoming</h4><h2>90</h2></div>
+            <div class="card purple"><h4>Outgoing</h4><h2>130</h2></div>
+            <div class="card red"><h4>Missed</h4><h2>30</h2></div>
+            <div class="card red"><h4>Rejected</h4><h2>10</h2></div>
+        </div>
+
+        <!-- TABLE LIST -->
+        <div class="section">
+            <h3>Table List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Address</th>
+                        <th>Count</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Amit Kumar</td>
+                        <td>9876543210</td>
+                        <td>amit@gmail.com</td>
+                        <td>Delhi</td>
+                        <td>Delhi</td>
+                        <td>Dwarka</td>
+                        <td>5</td>
+                        <td>
+                            <button class="action-btn view">View</button>
+                            <button class="action-btn edit">Edit</button>
+                            <button class="action-btn delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
