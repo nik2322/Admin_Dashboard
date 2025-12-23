@@ -240,9 +240,10 @@ body{
 /* Stats */
 .statGrid{
   display:grid;
-  grid-template-columns: repeat(5, minmax(0,1fr));
-  gap:10px;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap:12px;
 }
+
 .stat{
   padding:12px;
   border-radius:16px;
