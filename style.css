@@ -337,6 +337,48 @@ body{
   color:var(--text);
   cursor:pointer;
 }
+/* ===== Mobile Topbar Fix ===== */
+@media (max-width: 520px){
+  .topbar{
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .iconBtn{
+    display:grid; 
+    place-items:center;
+  }
+
+  .topbarLeft{
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .titleBlock h1{
+    font-size: 1rem;
+  }
+
+  .titleBlock p{
+    font-size: .82rem;
+    line-height: 1.2;
+    margin-top: 4px;
+  }
+
+  .topbarRight{
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .search{
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .avatar{
+    display:none;
+  }
+}
 
 /* ===== Responsive breakpoints ===== */
 
@@ -362,6 +404,7 @@ body{
     position:fixed;
     left:-310px;
     top:0;
+    background: #132135;
     height:100vh;
     z-index:50;
     transition:.22s ease;
