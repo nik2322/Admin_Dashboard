@@ -12,6 +12,8 @@
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
       <div class="brand">
+        <button class="closeBtn" aria-label="Close menu" onclick="toggleSidebar()">✕</button>
+
         <div class="logo">M</div>
         <div class="brandText">
           <div class="brandName">MIS</div>
@@ -33,6 +35,7 @@
         <div class="hint">Responsive • Modern UI</div>
       </div>
     </aside>
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
     <!-- Main -->
     <div class="main">
@@ -313,11 +316,24 @@
       </main>
     </div>
   </div>
+<script>
+  function toggleSidebar(){
+    document.getElementById('sidebar').classList.toggle('open');
+  }
+
+  // close on nav click (mobile)
+  document.querySelectorAll('.navItem').forEach(item=>{
+    item.addEventListener('click', ()=>{
+      document.getElementById('sidebar').classList.remove('open');
+    });
+  });
+</script>
 
   <script>
     function toggleSidebar(){
       document.getElementById('sidebar').classList.toggle('open');
     }
   </script>
+  
 </body>
 </html>

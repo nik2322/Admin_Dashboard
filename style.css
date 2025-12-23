@@ -397,6 +397,42 @@ body{
   .search{min-width: min(320px, 55vw);}
 }
 
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  opacity:0;
+  pointer-events:none;
+  transition:.2s ease;
+  z-index:40;
+}
+
+@media (max-width: 680px){
+  .sidebar{ z-index:50; }
+  .sidebar.open ~ .overlay{
+    opacity:1;
+    pointer-events:auto;
+  }
+}
+
+.closeBtn{
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:40px;
+  height:40px;
+  border-radius:14px;
+  border:1px solid var(--stroke);
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+  cursor:pointer;
+  display:none;
+}
+.closeBtn:hover{filter:brightness(1.08);}
+.sidebar{ position:sticky; } /* keep yours */
+.sidebar{ position:sticky; } /* ok */
+.sidebar{ position:relative; }
+
 /* Mobile */
 @media (max-width: 680px){
   .iconBtn{display:grid; place-items:center;}
